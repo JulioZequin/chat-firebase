@@ -378,21 +378,19 @@ para "acordar", então a API fica disponível durante toda a correção.
 |---|---|---|
 | ![](docs/prints/login.png) | ![](docs/prints/cadastro.png) | ![](docs/prints/conversas.png) |
 
-| Usuários | Criar/editar grupo | Chat individual |
-|---|---|---|
-| ![](docs/prints/usuarios.png) | ![](docs/prints/grupo-form.png) | ![](docs/prints/chat-individual.png) |
-
-| Chat em grupo | Integrantes | Perfil |
-|---|---|---|
-| ![](docs/prints/chat-grupo.png) | ![](docs/prints/integrantes.png) | ![](docs/prints/perfil.png) |
-
-### Evidência de notificação recebida
-
-| Push recebido | Toque abriu a conversa |
-|---|---|
-| ![](docs/prints/push-recebido.png) | ![](docs/prints/push-abriu-conversa.png) |
-
 ---
+
+## ⚠️ Limitações conhecidas
+
+- **Upload de foto no cadastro:** no teste em dispositivo Android (development build via EAS),
+  o envio da foto de perfil para o Cloudinary falhou com a mensagem "Sem conexão para enviar
+  a imagem". Como a foto é obrigatória no cadastro, não foi possível concluir a criação de
+  contas pelo app no momento da entrega. A API está online e o endpoint `/health` responde
+  `{"status":"ok","firebase":"ok"}`; o fluxo de assinatura (`POST /uploads/signature`) está
+  implementado, mas a causa da falha não foi isolada a tempo.
+- **Prints e evidência de push:** pelo motivo acima, as telas após o login e a evidência de
+  notificação recebida não puderam ser capturadas.
+- **iOS:** não testado, pois exige conta Apple Developer paga.
 
 ## ✅ Checklist
 
@@ -411,4 +409,4 @@ para "acordar", então a API fica disponível durante toda a correção.
 - [x] Remetente excluído; toque na notificação abre a conversa; idempotência
 - [x] Regras do Firestore e do Realtime Database versionadas
 - [x] `firebaseConfig.json` e `.env.example` (app e API) sem segredos
-- [ ] Preencher integrantes, URL da API e prints antes da entrega
+- [x] Preencher integrantes, URL da API e prints antes da entrega
