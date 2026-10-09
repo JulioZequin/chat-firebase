@@ -2,11 +2,11 @@
   "name": "chatfire-api",
   "version": "1.0.0",
   "private": true,
-  "description": "API de notifica\u00e7\u00f5es do ChatFire (Firebase Admin + FCM + Expo Push)",
+  "description": "API de notificações do ChatFire (Firebase Admin + FCM + Expo Push)",
   "type": "module",
   "main": "dist/index.js",
   "engines": {
-    "node": ">=20"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "tsx watch --env-file=.env src/local.ts",
@@ -26,5 +26,8 @@
     "@types/node": "^26.6.4",
     "tsx": "^4.23.15",
     "typescript": "~6.0.3"
+  },
+  "overrides": {
+    "jose": "^5.10.0"
   }
 }
