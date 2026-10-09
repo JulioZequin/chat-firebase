@@ -50,7 +50,7 @@
       ]
     ],
     "extra": {
-      "apiUrl": "https://SUA-API.vercel.app",
+      "apiUrl": "https://chat-firebase-omega.vercel.app",
       "eas": {
         "projectId": "00000000-0000-0000-0000-000000000000"
       }
