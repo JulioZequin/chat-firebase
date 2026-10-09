@@ -10,10 +10,11 @@ política de destinatários configurável por grupo.
 
 ## 👥 Integrantes
 
-> ⚠️ **Preencher antes da entrega** — sem nome e RM de todos, a nota é zero (máx. 5 integrantes).
-
-- RM00000 — Nome Completo
-- RM00000 — Nome Completo
+- RM556602 — Danilo Gronski Wendler
+- RM554758 — Italo Caliari Silva
+- RM554676 — Júlio César Ruiz Zequin
+- RM555983 — Pedro Henrique Muzel Santos
+- RM556027 — Vitor Montemor Ismael
 
 ---
 
@@ -21,8 +22,8 @@ política de destinatários configurável por grupo.
 
 | Item | Valor |
 |---|---|
-| URL pública | **https://SUA-API.vercel.app** ← substituir pela URL real |
-| Health check | `GET https://SUA-API.vercel.app/health` |
+| URL pública | **https://chat-firebase-omega.vercel.app** |
+| Health check | `GET https://chat-firebase-omega.vercel.app/health` |
 | Tecnologia | Node.js + Express 5 + TypeScript + Firebase Admin SDK + expo-server-sdk |
 | Hospedagem | Vercel, plano Hobby gratuito (Express zero-config → Vercel Function com HTTPS) |
 
@@ -203,6 +204,9 @@ Variáveis do app (`.env.example`):
 3. Teste em **iPhone físico** (simulador não recebe push remoto).
 
 > Motivo da divisão: no iOS, o FCM exige o SDK nativo do Firebase e o upload da chave APNs no
+> **Testes realizados:** o app foi testado em **Android** (development build via EAS).
+> O iOS não foi testado por exigir conta Apple Developer paga; o código e a configuração
+> do Expo Push Service para iOS estão implementados.
 > Firebase; o enunciado permite FCM **ou** Expo Push Service, então no iOS usamos o Expo e no
 > Android usamos o FCM diretamente, ambos disparados **somente pela API**.
 
@@ -346,6 +350,9 @@ para "acordar", então a API fica disponível durante toda a correção.
 2. Em <https://vercel.com>, entre com o GitHub → **Add New → Project** → importe o repositório.
 3. Em **Root Directory**, escolha **`server`**. O preset detectado deve ser **Express**.
 4. Em **Environment Variables**, cadastre as variáveis da tabela acima (valores reais só aqui).
+> **Observação:** foi necessário fixar `jose@^5` em `overrides` no `server/package.json`,
+> pois a versão 6 (ESM-only), trazida como dependência do Firebase Admin, causava
+> `ERR_REQUIRE_ESM` na Vercel.
 5. **Deploy**. Teste: `https://SUA-API.vercel.app/health` → `{"status":"ok","firebase":"ok",...}`.
 6. Coloque a URL em `app.json → expo.extra.apiUrl`, gere o build do app e atualize a tabela no topo.
 
