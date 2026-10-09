@@ -374,9 +374,11 @@ para "acordar", então a API fica disponível durante toda a correção.
 
 ## 🖼️ Prints
 
-| Login | Cadastro | Conversas |
-|---|---|---|
-| ![](docs/prints/login.png) | ![](docs/prints/cadastro.png) | ![](docs/prints/conversas.png) |
+| Login | Cadastro |
+|---|---|
+| <img src="docs/prints/login.jpg" width="250"> | <img src="docs/prints/cadastro.jpg" width="250"> |
+
+> As demais telas e a evidência de notificação não foram capturadas (ver *Limitações conhecidas*).
 
 ---
 
