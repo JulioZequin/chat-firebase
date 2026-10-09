@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "373413583954",
+    "firebase_url": "https://trabalhoreactnative-18373-default-rtdb.firebaseio.com",
+    "project_id": "trabalhoreactnative-18373",
+    "storage_bucket": "trabalhoreactnative-18373.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373413583954:android:72585b7f24a4a7fd8cd38b",
+        "android_client_info": {
+          "package_name": "br.edu.chatfire"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZhpxG3RLpYec9HQZ282zFUnHXHY_w6lo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "ChatFire",
+    "slug": "chatfire",
+    "scheme": "chatfire",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F766E"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "br.edu.chatfire"
+    },
+    "android": {
+      "package": "br.edu.chatfire",
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "backgroundColor": "#0F766E",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-dev-client",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/android-icon-monochrome.png",
+          "color": "#0F766E",
+          "defaultChannel": "messages",
+          "enableBackgroundRemoteNotifications": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O ChatFire precisa acessar suas fotos para você escolher a foto de perfil ou do grupo.",
+          "cameraPermission": "O ChatFire precisa acessar a câmera para você tirar a foto de perfil ou do grupo."
+        }
+      ]
+    ],
+    "extra": {
+      "apiUrl": "https://SUA-API.vercel.app",
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  }
+}
