@@ -26,7 +26,8 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "permissions": [
-        "android.permission.POST_NOTIFICATIONS"
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO"
       ],
       "predictiveBackGestureEnabled": false
     },
@@ -50,7 +51,11 @@
       ]
     ],
     "extra": {
-      "apiUrl": "https://chat-firebase-omega.vercel.app"
-    }
+      "apiUrl": "https://chat-firebase-omega.vercel.app",
+      "eas": {
+        "projectId": "be867457-6065-4758-8501-ca05f17eee8c"
+      }
+    },
+    "owner": "juliozequin"
   }
 }
